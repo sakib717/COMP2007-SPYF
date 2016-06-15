@@ -145,7 +145,7 @@ color: white;
     position: absolute;
     left: 0;
     bottom: 0;
-    /*margin-left: 0;*/
+    height: 23px;
 }
 
 .gridbox-3 p {

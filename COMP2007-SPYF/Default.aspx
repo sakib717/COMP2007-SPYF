@@ -1,7 +1,44 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="COMP2007_SPYF.Default" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+
     <div class="container">
-        <h1>Welcome to SPYF!</h1>
+
+        <style>
+            body {
+                background: url("Assets/Images/background.jpg") no-repeat fixed center;
+                background-size: cover;
+            }
+        </style>
+        <h1>WELCOME TO SPYF!</h1>
+        <h2>Track Your Game.</h2>
+
+        <div class="container" style="margin-top: 215px;">
+            <div class="row text-center" style="min-width: 100%;">
+                <div class="col-md-4 col-max gridbox-3">
+                    <h3>Sign up!</h3>
+                    <hr>
+                    <p>Want to track games, but don't have an account? Then signup and track your game!</p>
+                    <a id="CreateButton" class="btn btn-login btn-md col-sm-11" href="/signup" role="button">Sign Up</a>
+                </div>
+                <div class="col-md-4 col-centered col-max gridbox-3">
+                    <h3>Guest User</h3>
+                    <hr>
+                    <p>Don't have an account but want to track games?</p>
+                    <a id="AnswerButton" class="btn btn-login btn-md col-sm-11" href="/survey" role="button">Track Games!</a>
+                </div>
+                <div class="col-md-4 col-centered col-max gridbox-3">
+                    <h3>Login</h3>
+                    <hr>
+                    <p>Want to view account?</p>
+                    <a id="Statistics" class="btn btn-login btn-md col-sm-11" href="/login" role="button">Login</a>
+                </div>
+            </div>
+        </div>
     </div>
+
 </asp:Content>
+<asp:Content ID="Content3" runat="server" ContentPlaceHolderID="head">
+    <link href="Content/app.css" rel="stylesheet" type="text/css" />
+</asp:Content>
+

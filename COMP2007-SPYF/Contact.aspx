@@ -2,50 +2,40 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="container">
- <h1><b>Your feedback is important to us!</b></h1>
-        <br>
-          <div class="form-group">
-           
-              <label class="control-label" for="FirstNameTextBox">First Name</label>
-            <asp:TextBox runat="server" CssClass="form-control" ID="FirstNameTextBox" placeholder="First Name" required="true"></asp:TextBox>
+        <style>
+            body {
+                background: url("Assets/Images/background3.jpg") no-repeat fixed center;
+                background-size: cover;
+            }
+        </style>
+        <h1>Your feedback Please!</h1>
 
-         </div>
 
         <div class="form-group">
-
-            <label class="control-label" for="LastNameTextBox">Last Name</label>
-            <asp:TextBox runat="server" CssClass="form-control" ID="LastNameTextBox" placeholder="Last Name" required="true"></asp:TextBox>
-
+            <h6>
+                <label for="exampleInputName2">Name</label></h6>
+            <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
         </div>
-
-
         <div class="form-group">
-
-            <label class="control-label" for="EmailTextBox">Email</label>
-            <asp:TextBox runat="server" TextMode="Email" CssClass="form-control" ID="EmailTextBox" placeholder="Email" required="true"></asp:TextBox>
-
+            <h6>
+                <label for="exampleInputEmail2">Email</label></h6>
+            <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
         </div>
-
-
         <div class="form-group">
 
-            <label class="control-label" for="ContactNumberTextBox">Contact Number</label>
-            <asp:TextBox runat="server" TextMode="Phone" CssClass="form-control" ID="ContactNumberTextBox" placeholder="Contact Number" required="true"></asp:TextBox>
-
-        </div>
-
-        <div class="form-group">
-
-            <label class="control-label" for="MessageTextBox">Message</label>
+            <h6>
+                <label class="control-label" for="MessageTextBox">Message</label></h6>
             <asp:TextBox runat="server" TextMode="MultiLine" Columns="5" Rows="5" CssClass="form-control" ID="MessageTextBox" placeholder="Please Type Your Message" required="true"></asp:TextBox>
 
         </div>
 
+
+
         <asp:Button CssClass="btn btn-primary" Text="Send" runat="server" OnClick="Unnamed1_Click" />
-
-        
-
-
 
     </div>
 </asp:Content>
+<asp:Content ID="Content3" runat="server" ContentPlaceHolderID="head">
+    <link href="Content/app.css" rel="stylesheet" type="text/css" />
+</asp:Content>
+

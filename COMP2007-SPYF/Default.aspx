@@ -2,6 +2,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
+
     <div class="container">
 
         <style>
@@ -16,7 +17,7 @@
         <div class="container" style="margin-top: 215px;">
             <div class="row text-center" style="min-width: 100%;">
                 <div class="col-md-4 col-max gridbox-3">
-                    <h3>Sign up!</h3>
+                    <h3>SignUp!</h3>
                     <hr>
                     <p>Want to track games, but don't have an account? Then signup and track your game!</p>
                     <a id="CreateButton" class="btn btn-login btn-md col-sm-11" href="/signup" role="button">Sign Up</a>

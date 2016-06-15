@@ -1,6 +1,9 @@
 ﻿
 /*For Custom CSS*/
 
+
+/*****FOR ALL FONTS*****/
+
 @font-face{
       font-family: Staubach;
 	  src: url("Staubach.ttf");
@@ -38,8 +41,47 @@ color: white;
 }
 h2:hover{color:red;}
 
+ h3{
+font-family: Staubach;
+font-size: 45px;
+ transition: all 0.3s ease 0s;
+text-shadow: 4px 4px 4px #000000;
+text-align: left;
+color: aqua;
+}
+h3:hover{color:blue;}
 
-/*Front End*/
+
+ h4{
+font-family: Staubach;
+font-size: 25px;
+text-align: left;
+text-shadow: 3px 3px 3px #000000;
+text-align: left;
+color: red;
+}
+
+ h5{
+font-family: Staubach;
+font-size: 45px;
+ transition: all 0.3s ease 0s;
+text-shadow: 4px 4px 4px #000000;
+text-align: left;
+color: white;
+}
+ h5:hover { color: red;}
+
+  h6{
+font-family: Staubach;
+font-size: 25px;
+
+text-shadow: 1px 1px 1px #000000;
+text-align: left;
+color: white;
+}
+
+
+    /*****FOR PANELS****/
 
 .btn-login {
     background: #337ab7;
@@ -60,13 +102,7 @@ h2:hover{color:red;}
     border-right-color: #204d74;
 }
 
-#logo {
-    position: absolute;
-    text-align: center;
-    width: 100%;
-    margin-top: -85px;
-    margin-left: 25%;
-}
+
 
 #nav-wrapper {
     position: relative;
@@ -134,8 +170,18 @@ h2:hover{color:red;}
     font: 16px Arial, sans-serif;
     font-weight: bold;
 }
-    
+
+/******FOR CUSTOM NAVBAR******/    
 .navbar-custom {
     color: #FFFFFF;
     background-color: blue;
 }
+
+
+/****FOR TEXT BORDER****/
+
+.borderexample
+{
+border-style:solid;
+border-color:black;
+} 

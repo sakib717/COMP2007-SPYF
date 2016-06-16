@@ -20,19 +20,19 @@
                     <h3>SignUp!</h3>
                     <hr>
                     <p>Want to track games, but don't have an account? Then signup and track your game!</p>
-                    <a id="CreateButton" class="btn btn-login btn-md col-sm-11" href="/signup" role="button">Sign Up</a>
+                    <a id="SignUpButton" class="btn btn-login btn-md col-sm-11" href="Signup.aspx" role="button">Sign Up</a>
                 </div>
                 <div class="col-md-4 col-centered col-max gridbox-3">
                     <h3>Guest User</h3>
                     <hr>
                     <p>Don't have an account but want to track games?</p>
-                    <a id="AnswerButton" class="btn btn-login btn-md col-sm-11" href="/survey" role="button">Track Games!</a>
+                    <a id="TrackButton" class="btn btn-login btn-md col-sm-11" href="guesttrack.aspx" role="button">Track Games!</a>
                 </div>
                 <div class="col-md-4 col-centered col-max gridbox-3">
                     <h3>Login</h3>
                     <hr>
                     <p>Want to view account?</p>
-                    <a id="Statistics" class="btn btn-login btn-md col-sm-11" href="/login" role="button">Login</a>
+                    <a id="LoginButton" class="btn btn-login btn-md col-sm-11" href="/login" role="button">Login</a>
                 </div>
             </div>
         </div>

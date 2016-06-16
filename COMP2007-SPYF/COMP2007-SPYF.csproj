@@ -47,11 +47,21 @@
       <HintPath>..\packages\AspNet.ScriptManager.jQuery.2.2.3\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -73,11 +83,30 @@
     <Content Include="About.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\app.css" />
+    <Content Include="guesttrack.aspx" />
+    <Content Include="Models\SPYF.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SPYF.edmx</DependentUpon>
+      <LastGenOutput>SPYF.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\SPYF.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SPYF.edmx</DependentUpon>
+      <LastGenOutput>SPYF.cs</LastGenOutput>
+    </Content>
     <Content Include="packages.config" />
     <Content Include="Scripts\app.js" />
     <Content Include="Scripts\jquery-2.2.3.min.map" />
+    <Content Include="Signup.aspx" />
     <Content Include="Site.Master" />
     <Content Include="Default.aspx" />
+    <EntityDeploy Include="Models\SPYF.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SPYF.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\SPYF.edmx.diagram">
+      <DependentUpon>SPYF.edmx</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -129,7 +158,42 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="guesttrack.aspx.cs">
+      <DependentUpon>guesttrack.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="guesttrack.aspx.designer.cs">
+      <DependentUpon>guesttrack.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Game.cs">
+      <DependentUpon>SPYF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Registration.cs">
+      <DependentUpon>SPYF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SPYF.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SPYF.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SPYF.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SPYF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SPYF.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SPYF.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Signup.aspx.cs">
+      <DependentUpon>Signup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Signup.aspx.designer.cs">
+      <DependentUpon>Signup.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -146,7 +210,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Code\" />
+    <Folder Include="App_Data\" />
     <Folder Include="Assets\Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

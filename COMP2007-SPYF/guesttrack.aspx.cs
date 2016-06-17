@@ -46,11 +46,29 @@ namespace COMP2007_SPYF
                              select allGames);
 
                 //bind the result to the the GameGridView
+                DataTable dt = new DataTable();
+                dt.Columns.Add("Game ID");
+                dt.Columns.Add("Games");
+                dt.Columns.Add("Description");
+                dt.Columns.Add("Team A");
+                dt.Columns.Add("Team B");
+                dt.Columns.Add("Spectators");
+                dt.Columns.Add("Winner");
+                for (int i = 0; i < 100; i++)
+                {
+                    dt.Rows.Add(new object[] { i, 123 * i, 4567 * i, 2 * i, });
+                }
+
                 GameGridView.DataSource = Games.ToList();
                 GameGridView.DataBind();
             }
         }
-      }
+
+        protected void GameGridView_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+
+        }
+    }
   }
 
 

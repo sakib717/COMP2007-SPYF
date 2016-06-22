@@ -84,6 +84,7 @@
     <Content Include="Contact.aspx" />
     <Content Include="Content\app.css" />
     <Content Include="guesttrack.aspx" />
+    <Content Include="MatchDetails.aspx" />
     <Content Include="Models\SPYF.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>SPYF.edmx</DependentUpon>
@@ -164,6 +165,13 @@
     </Compile>
     <Compile Include="guesttrack.aspx.designer.cs">
       <DependentUpon>guesttrack.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MatchDetails.aspx.cs">
+      <DependentUpon>MatchDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MatchDetails.aspx.designer.cs">
+      <DependentUpon>MatchDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\Game.cs">
       <DependentUpon>SPYF.tt</DependentUpon>

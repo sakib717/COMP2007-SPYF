@@ -12,14 +12,25 @@
         <div class="row">
             <div class="col-md-offset-2 col-md-8">
                 <h1>Games List</h1>
-                
-            <asp:GridView ID="GameGridView"
-CssClass="table table-striped table-bordered table-hover"
-   runat="server" PageSize="5"
-   AllowPaging="true" AutoGenereateColumns="false"
-                OnPageIndexChanging="GameGridView_PageIndexChanging"></asp:GridView>
+                 <asp:GridView runat="server" CssClass="table table-bordered table-striped table-hover"
+                    ID="GameGridView" AutoGenerateColumns="false" DataKeyNames="GameID" 
+                     OnRowDeleting="GameGridView_RowDeleting" Allowpaging="true" pagesize="5"
+                     OnPageIndexChanging="GameGridView_PageIndexChanging" >
 
+                      <Columns>
+                            <asp:BoundField DataField= "GameID" HeaderText="Game ID" Visible="true" />
+                            <asp:BoundField DataField= "Name" HeaderText="Game" Visible="true" />
+                          <asp:BoundField DataField= "Description" HeaderText="Description" Visible="true" />
+                          <asp:BoundField DataField= "TotalPointsA" HeaderText="Team A" Visible="true" />
+                           <asp:BoundField DataField= "TotalPointsB" HeaderText="Team B" Visible="true" />
+                           <asp:BoundField DataField= "Spectators" HeaderText="Spectators" Visible="true" />
+                           <asp:BoundField DataField= "WinningTeam" HeaderText="WinningTeam" Visible="true" />
+                          <asp:CommandField HeaderText="Delete" DeleteText="<i class='fa fa-trash-o fa-lg'></i>Delete" 
+                              ShowDeleteButton="true" ButtonType="Link" ControlStyle-CssClass="btn btn-danger btn-sm" />
+                     </Columns>
+          </asp:GridView>
             </div>
+            <a href ="MatchDetails.aspx" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> Add Match!</a>
         </div>
     </div>
 

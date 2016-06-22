@@ -12,20 +12,24 @@ namespace COMP2007_SPYF.Models
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    
+
     public partial class DefaultConnection : DbContext
     {
+
+
+
+
         public DefaultConnection()
             : base("name=DefaultConnection")
         {
         }
-    
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
         }
-    
+
         public virtual DbSet<Registration> Registrations { get; set; }
-        public virtual DbSet<Game> Games { get; set; }
+        public virtual DbSet<Game> Game { get; set; }
     }
 }

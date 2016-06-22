@@ -20,5 +20,6 @@ namespace COMP2007_SPYF.Models
         public int TotalPointsB { get; set; }
         public int Spectators { get; set; }
         public string WinningTeam { get; set; }
+        public int GameID { get; internal set; }
     }
 }

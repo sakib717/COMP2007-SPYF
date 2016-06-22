@@ -5,7 +5,7 @@
     <div class="container">
         <style>
             body {
-                background: url("Assets/Images/background2.jpg") no-repeat fixed center;
+                background: url("Assets/Images/background5.jpg") no-repeat fixed center;
                 background-size: cover;
             }
         </style>
